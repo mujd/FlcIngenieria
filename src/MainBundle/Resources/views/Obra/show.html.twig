@@ -1,0 +1,170 @@
+{% extends 'baseSlide.html.twig' %}
+{% block title %}Obras{% endblock %}
+{% block body %}
+
+
+
+    {#{% for obraImage in obras.images %}
+        <img class="img-or" style="width: 100px;" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+    {% endfor %}
+    {% for obraImage in obras.images %}
+        <img class="img-or" style="width: 100px;" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+    {% endfor %}#}
+    <div class="container">
+        <div id="main_area">
+            <!-- Slider -->
+            <div class="row">
+                <h2>{{ obras.title }}</h2>
+                <hr>
+                <div class="col-xs-12" id="slider">
+                    <!-- Top part of the slider -->
+                    <div class="row">
+                        <div class="col-sm-8" id="carousel-bounding-box">
+                            <div class="carousel slide" id="myCarousel">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                        {% for obraImage in obras.images|slice(0,1) %}
+                                            <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="item" data-slide-number="1">
+                                        {% for obraImage in obras.images|slice(1,1) %}
+                                            <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="item" data-slide-number="2">
+                                        {% for obraImage in obras.images|slice(2,2) %}
+                                            <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="item" data-slide-number="3">
+                                        {% for obraImage in obras.images|slice(0,1) %}
+                                            <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="item" data-slide-number="4">
+                                        {% for obraImage in obras.images|slice(1,1) %}
+                                            <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="item" data-slide-number="5">
+                                        {% for obraImage in obras.images|slice(2,2) %}
+                                            <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                                        {% endfor %}
+                                    </div>
+                                </div><!-- Carousel nav -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>                                       
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>                                       
+                                </a>                                
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4" id="carousel-text"></div>
+
+                        <div id="slide-content" style="display: none;">
+                            <div id="slide-content-0">
+                                <h2>{{ obras.title }}</h2>
+                                <p>{{ obras.body }}</p>
+                                <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                            </div>
+
+                            <div id="slide-content-1">
+                                <h2>{{ obras.title }}</h2>
+                                <p>{{ obras.body }}</p>
+                                <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                            </div>
+
+                            <div id="slide-content-2">
+                                <h2>{{ obras.title }}</h2>
+                                <p>{{ obras.body }}</p>
+                                <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                            </div>
+
+                            <div id="slide-content-3">
+                                <h2>{{ obras.title }}</h2>
+                                <p>{{ obras.body }}</p>
+                                <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                            </div>
+
+                            <div id="slide-content-4">
+                                <h2>{{ obras.title }}</h2>
+                                <p>{{ obras.body }}</p>
+                                <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                            </div>
+
+                            <div id="slide-content-5">
+                                <h2>{{ obras.title }}</h2>
+                                <p>{{ obras.body }}</p>
+                                <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/Slider-->
+
+            <div class="row hidden-xs" id="slider-thumbs">
+                <!-- Bottom switcher of slider -->
+                <ul class="hide-bullets">
+                    <li class="col-sm-2">
+                        <a class="thumbnail" id="carousel-selector-0">
+                            {% for obraImage in obras.images|slice(0,1) %}
+                                <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                            {% endfor %}
+                        </a>
+                    </li>
+
+                    <li class="col-sm-2">
+                        <a class="thumbnail" id="carousel-selector-1">
+                            {% for obraImage in obras.images|slice(1,1) %}
+                                <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                            {% endfor %}
+                        </a>
+                    </li>
+
+                    <li class="col-sm-2">
+                        <a class="thumbnail" id="carousel-selector-2">
+                            {% for obraImage in obras.images|slice(2,2) %}
+                                <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                            {% endfor %}
+                        </a>
+                    </li>
+
+                    <li class="col-sm-2">
+                        <a class="thumbnail" id="carousel-selector-3">
+                            {% for obraImage in obras.images|slice(0,1) %}
+                                <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                            {% endfor %}
+                        </a>
+                    </li>
+
+                    <li class="col-sm-2">
+                        <a class="thumbnail" id="carousel-selector-4">
+                            {% for obraImage in obras.images|slice(1,1) %}
+                                <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                            {% endfor %}
+                        </a>
+                    </li>
+
+                    <li class="col-sm-2">
+                        <a class="thumbnail" id="carousel-selector-5">
+                            {% for obraImage in obras.images|slice(2,2) %}
+                                <img class="img-or" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}">
+                            {% endfor %}
+                        </a>
+                    </li>
+                </ul>                 
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

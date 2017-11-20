@@ -1,0 +1,63 @@
+/* Add this class for slide transitions */
+/*.pswp__container_transition {
+    -webkit-transition: -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
+    transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
+}*/
+.my-gallery {
+    width: 100%;
+    float: right;
+}
+.my-gallery img {
+    width: 100%;
+    height: auto;
+    
+}
+.my-gallery figure {
+    display: block;
+    float: left;
+    margin: 15px 15px 15px 15px;
+    width: 330px;
+}
+.my-gallery figcaption {
+    display: none;
+}
+
+.estiloImagen {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.estiloImagen:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.7);
+}
+
+/*ROTAR IMAGEN*/
+.pswp__img, .img-orientation {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+/* FIN ROTAR IMAGEN */
+
+.posteo{
+    margin-bottom: 40px;
+}
+
+.postGall{
+    margin-left: 50px;
+    text-align: justify;
+    font-family: "Times New Roman", Arial, sans-serif;
+}
+
+.postTitulo {
+    font-family: "Times New Roman", Arial, sans-serif;
+}
+
+@media screen and (max-width: 768px){
+    .my-gallery figure {
+        width: 200px;
+    }
+}

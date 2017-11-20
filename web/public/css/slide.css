@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+html {
+    height: 100%;
+    box-sizing: border-box;
+
+}
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    background-color: #fff;
+    padding-top: 100px;
+    /*background-color: #C2BFBA;#E97313*/
+}
+
+.main {
+    padding: 0;
+    margin: 0;
+}
+
+/*-- HEADER #8A2BE2--*/
+
+.image_full{
+    display:block;
+}
+
+.image_mobile{
+    display:none;
+}
+
+.navbar-brand,
+.navbar-nav {
+    padding: 0 15px;
+    height: 110px;
+    line-height: 110px;
+}
+
+.navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 30px;
+        padding-bottom: 0px;
+        line-height: 80px;
+    }
+}
+
+/*.navbar{
+    margin-bottom: 0;
+}*/
+
+.img-mod {
+    padding-bottom: 1000px;
+}
+
+.jumbotron{
+    background: #C2BFBA;
+    color:#fff;
+    margin: 0;
+    padding: 0px 0;
+    height: auto;
+}
+
+.miga-de-pan{
+    color: black;
+    background-color: #E97313;
+
+}
+
+.breadcrumb.brand-warning{
+    /*background-color:#f0ad4e;*/    
+    background-color: #E97313;
+}
+.breadcrumb.brand-warning a{
+    color:#fff;    
+}
+.breadcrumb.brand-warning li.active{
+    color:#eee;    
+}
+
+ol, li a:link{
+    text-decoration: none;	
+}
+
+.imgLogo{
+    padding: 0;
+}
+
+/* -- POST -- */
+.main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contacto-mensaje {
+    margin-top: -222px;
+}
+
+/* -- Media Querie --*/
+@media screen and (max-width: 993px){
+
+    .contacto-mensaje {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .image_full{
+        display:none;
+    }
+    .navbar-nav {
+        padding: 5px;
+        height: auto;
+    }
+
+
+    .navbar-nav > li > a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 10px;
+    }
+
+    .image_mobile{
+        display:block;
+    }
+    .contacto-mensaje {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .imgLogo {
+        width: 330px;
+    }
+}
+@media screen and (max-width: 320px){
+    .imgLogo {
+        width: 290px;
+    }
+}
+/*footer {
+    padding-top: 10px;
+    background-color: black;
+    color: white;
+
+}
+*/
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #2a3f53;
+    color: #C2BFBA;
+}
+
+footer a{
+    color: #C2BFBA;
+}
+
+footer a:hover {
+    color: black;
+}
+
+footer a:link{
+    text-decoration: none;	
+}
+
+/*footer a:hover{
+    color: white;
+}*/
+
+/*ROTAR IMAGEN*/
+.img-or {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+/* FIN ROTAR IMAGEN */
+
+/*OBRAS*/
+
+
+/* navbar */
+.navbar-default {
+    font-size: 16px;
+    border-radius: auto;
+    border: none;
+    background-color: #2a3f53;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #C2BFBA;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #C2BFBA;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #C2BFBA;
+    background-color: #2a3f53;  
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #C2BFBA;
+    background-color: #485778;  
+}
+/* caret */
+.navbar-default .navbar-nav > li > a .caret {
+    border-top-color: #C2BFBA;
+    border-bottom-color: #C2BFBA;
+    color: #C2BFBA;
+}
+.navbar-default .navbar-nav > li > a:hover .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #C2BFBA;
+    color:#2a3f53;
+}
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+}
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+.carousel {
+    width: 600px;
+}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block title %}Obras{% endblock %}
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <h2>Obras</h2><hr>
+            {% for obra in obras %}
+                <article class="post clearfix col-lg-6">
+                    <a href="#" class="thumb pull-left">
+                        {% for obraImage in obra.images|slice(0,1) %}
+                            {{ obraImage.name }}
+                            <img class="img-or" width="200" src="{{ asset("../../AdminWeb/web/uploads/images/obra/"~obraImage.image)}}" alt="">
+                        {% endfor %}
+
+
+                    </a>
+                    <h2 class="post-title">
+                        <a href="#">{{obra.title}}</a>
+                    </h2>
+
+                    <p class="post-contenido text-justify">
+                        {{ obra.body }} - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, similique odit temporibus minus nulla architecto ullam deleniti voluptate odio rem possimus commodi pariatur rerum repellendus doloremque optio quasi nesciunt blanditiis.
+                    </p>
+
+                    <div lass="contenedor-botones">
+                        <a href="{{ path("obras_view",{ "id":obra.id }) }}" class="btn btn-primary pull-right">Leer Mas</a>
+                        {#<a href="#" class="btn btn-success">Comentarios <span class="badge">20</span></a>#}
+                    </div>
+                </article>
+            {% endfor %}    
+        </div>
+    </div>
+{% endblock %}
+

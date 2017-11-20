@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+{% block title %}Contacto{% endblock %}
+{% block body %}
+    <div class="container" style="">
+        <div class="row">
+            
+            <h2 class=page-header>Contactanos</h2>
+
+            {{ form_start(form) }}
+            <div class="form-group col-sm-10 col-xs-10 col-md-5 col-lg-5">
+                {{ form_label(form.nombre, 'Nombre', { 'label_attr': {'class': 'control-label'} }) }}
+                {{ form_widget(form.nombre, {'attr' : {'placeholder' : '', 'style':'', 'class': 'form-control'}}) }}
+                {{ form_errors(form.nombre) }}
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group col-sm-10 col-xs-10 col-md-5 col-lg-5" style="">
+                {{ form_label(form.email, 'Email', { 'label_attr': {'class': 'control-label'} }) }}
+                {{ form_widget(form.email, {'attr' : {'placeholder' : '', 'class': 'form-control'}}) }}
+                {{ form_errors(form.email) }}
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group col-sm-10 col-xs-10 col-md-5 col-lg-5" style="">
+                {{ form_label(form.fono, 'Teléfono', { 'label_attr': {'class': 'control-label'} }) }}
+                {{ form_widget(form.fono, {'attr' : {'placeholder' : '', 'class': 'form-control'}}) }}
+                {{ form_errors(form.fono) }}
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group col-sm-10 col-xs-10 col-md-5 col-lg-5" style="">
+                {{ form_label(form.motivo, 'Motivo', { 'label_attr': {'class': 'control-label'} }) }}
+                {{ form_widget(form.motivo, {'attr' : {'placeholder' : '', 'class': 'form-control'}}) }}
+                {{ form_errors(form.motivo) }}
+            </div>
+            <div class="form-group col-sm-10 col-xs-10 col-md-5 col-lg-7 contacto-mensaje" style=" ">
+                {{ form_label(form.mensaje, 'Requerimiento', { 'label_attr': {'class': 'control-label'} }) }}
+                {{ form_widget(form.mensaje, {'attr' : {'placeholder' : '', 'rows': '', 'cols' : '' , 'style':'height:210px;','class': 'form-control'}}) }}
+                {{ form_errors(form.mensaje) }}
+            </div>
+            <div class="form-group col-md-offset-4 col-sm-10 col-xs-10 col-md-3 col-lg-2">
+                {{ form_widget(form.enviar, {'label' : 'Enviar *', 'attr' : {  'class': 'form-control', 'class': 'btn btn-danger btn-lg'}}) }}
+            </div>
+            <div class="col-lg-5" style="margin-bottom: 100px;">
+                <label for="">Como llegaste a la pagina?</label>
+                <select name="" id="" class="form-control">
+                    <option value="">Seleccione</option>
+                    <option value="">habitissimo</option>
+                    <option value="">Un amigo</option>
+                    <option value="">Internet</option>
+                    <option value="">Por recomendación</option>
+                </select>
+            </div>
+            {{ form_end(form) }}
+
+            <div class="col-sm-10 col-xs-10 col-md-4 col-lg-4" style="">
+                {% for flash_message in app.session.flashbag.get('notice') %}
+                    <div class="alert alert-success">
+                        {{ flash_message }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

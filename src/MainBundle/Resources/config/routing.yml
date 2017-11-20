@@ -1,0 +1,35 @@
+main_homepage:
+    path:     /
+    defaults: { _controller: MainBundle:Default:index }
+
+obras_list:
+    path:     /obras
+    defaults: { _controller: MainBundle:Default:list }
+
+obras_show:
+    path:     /obras/show/{id}
+    defaults: { _controller: MainBundle:Default:show }
+
+obras_view:
+    path:     /obras/view/{id}
+    defaults: { _controller: MainBundle:Default:view }    
+
+main_nosotros:
+    path:     /nosotros
+    defaults: { _controller: MainBundle:Default:nosotros }
+
+main_objetivo:
+    path:     /objetivo
+    defaults: { _controller: MainBundle:Default:objetivo }
+    
+main_mivi:
+    path:     /mision-vision
+    defaults: { _controller: MainBundle:Default:mivi }
+
+main_obras:
+    path:     /obrass
+    defaults: { _controller: MainBundle:Default:obras }    
+
+contacto:
+    path:     /contacto
+    defaults: { _controller: MainBundle:Contacto:contacto }    

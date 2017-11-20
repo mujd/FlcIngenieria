@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{{ asset('public/imagenes/favico.png') }}" />
+    {% block stylesheets %}{% endblock %}
+    {#<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <l0ink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">#}
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/photoswipe.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/default-skin/default-skin.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/estilos.css') }}" />
+    <script src="{{ asset('public/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('public/js/photoswipe.min.js') }}"></script>
+    <script src="{{ asset('public/js/photoswipe-ui-default.min.js') }}"></script>
+    <script src="{{ asset('public/js/funciones.js') }}"></script>
+    <title>{% block title %}{% endblock %} - Flc Ingeniería</title>
+    <style type="text/css">
+        
+        
+    </style>
+</head>
+<body>
+    <header class="mainHeader">
+        <nav class="navbar navbar-default navbar-fixed-top navMain" role="navigation">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+                        <span class="sr-only">Desplegar / Ocultar Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="{{path('main_homepage')}}" class="navbar-brand">
+                        <div>
+                            <img width="235px"  class="media-object image_full" src="{{asset('public/imagenes/FLC-Original-final.png')}}" alt="...">
+                            <img class="media-object image_mobile" src="{{asset('public/imagenes/Logo-flcIngenieria-original-final.png')}}" alt="...">
+                        </div>                        
+                    </a>
+                    {#<a href="#" class="navbar-brand">Flc Ingeniería</a>
+                    <div>
+                        <img class="media-object" src="{{asset('public/imagenes/flc-logo-2.png')}}" alt="...">
+                    </div> #}
+                </div>
+                <!-- Inicia Menu -->
+                <div class="collapse navbar-collapse" id="navegacion-fm">
+
+                    <ul class="nav navbar-nav navbar-right menu">
+                        <li class=""><a href="{{path('main_homepage')}}">Inicio</a></li>
+                            {#<li class=""><a href="{{path('obras_list')}}">Obras</a></li>#}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                Obras <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="nav-item"><a href="{{path('obras_list')}}">Obras terminadas</a></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="#">Remodelaciones</a></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="#">Obras en Proceso</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="">Otros servicios</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                Nosotros <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="nav-item"><a href="{{path('main_nosotros')}}">Nuestra empresa</a></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="{{path('main_objetivo')}}">Objetivo</a></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="{{path('main_mivi')}}">Misión - Visión</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="{{path('contacto')}}">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" >
+            <div class="row" id="contenidoSlide">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-or CoverImage FlexEmbed FlexEmbed--2by1" style="width:100%;" src="{{asset('public/imagenes/obras/obra_1/obra1_1.jpg')}}" alt="Los Angeles">
+                            {#<div class="carousel-caption">
+                                <h3>Obra 1</h3>
+                                <p>Reseña obra 1</p>
+                            </div>#}
+                        </div>
+
+                        <div class="item">
+                            <img class="img-or CoverImage" style="width:100%;" src="{{asset('public/imagenes/obras/obra_1/obra1_2.jpg')}}" alt="Chicago">
+                        </div>
+
+                        <div class="item">
+                            <img class="img-or CoverImage" style="width:100%;" src="{{asset('public/imagenes/obras/obra_1/obra1_3.jpg')}}" alt="New York">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    {#<div class="col-sm-2 col-xs-2 col-md-6 col-lg-12">
+        <a href="{{path('main_homepage')}}" class="img-mod">
+            <img class="media-object imgLogo" src="{{asset('public/imagenes/Logo-flcIngenieria-small.png')}}" alt="...">
+        </a>
+    </div>#}                    
+
+    <section id="mainSection" class="main ">
+    {% block body %}{% endblock %}
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-5 col-md-2">
+                <p>Flc Ingeniería LTDA. &copy;</p>
+            </div>
+            <div class="col-xs-5 col-md-4">
+                Teléfonos: +569 4154 0795, +569 6236 7360
+            </div>
+            <div class="col-xs-5 col-md-3">
+                Contacto: contacto@flcingenieria.cl
+            </div>
+            <div class="col-xs-7 col-md-3"> 
+                <ul class="list-inline text-right">
+                    <li><a href="{{path('main_homepage')}}">Inicio</a></li>
+                    <li><a href="{{path('obras_list')}}">Obras</a></li>
+                    <li><a href="{{path('main_nosotros')}}">Nosotros</a></li>
+                    <li><a href="{{path('contacto')}}">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+{#<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>#}
+{% block javascripts %}
+
+{% endblock %}
+</body>
+</html>
